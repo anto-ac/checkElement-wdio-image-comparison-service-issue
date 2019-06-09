@@ -1,4 +1,4 @@
-# wdio-sessionStorage-issue
+# wdio image comparison service - checkElement issue
 Sample project to reproduce an issue
 
 # Pre-requisite
