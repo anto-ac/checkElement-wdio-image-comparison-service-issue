@@ -1,17 +1,7 @@
-import { expect } from 'chai';
+describe("App Content", function () {
+  it("should check element", function () {
+    browser.url("https://www.treatwell.co.uk/treatment/spray-tanning-and-sunless-tanning/");
 
-describe("Storage", function () {
-  it("should clear localStorage", function () {
-    browser.url("http://www.google.com");
-    expect(browser.getTitle()).to.be.equal("Google");
-
-    browser.clearLocalStorage();
-  });
-
-  it("should clear sessionStorage", function () {
-    browser.url("http://www.google.com");
-    expect(browser.getTitle()).to.be.equal("Google");
-
-    browser.clearSessionStorage();
+    (browser as any).checkElement($('[class*=app--content--]'), 'App Content');
   });
 });

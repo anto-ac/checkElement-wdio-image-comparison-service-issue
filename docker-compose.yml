@@ -30,6 +30,8 @@ services:
       - selenium-hub
     volumes:
       - ./src/config/:/src/config
+      - ./test-output/:/home/test/test-output
+      - ./visual-regression/:/home/test/visual-regression
     environment:
       - PORT_SELENIUM_HUB
       - PORT_SELENIUM_NODE

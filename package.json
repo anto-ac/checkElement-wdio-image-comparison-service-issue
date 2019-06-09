@@ -1,5 +1,5 @@
 {
-  "name": "wdio-sessionStorage-issue",
+  "name": "checkElement-wdio-wdio-image-comparison-service-issue",
   "version": "1.0.0",
   "scripts": {
     "test": "npm run waitforservices && wdio src/config/wdio.conf.js --hostname selenium-hub",
@@ -24,6 +24,7 @@
     "ts-node": "^8.2.0",
     "tsconfig-paths": "^3.8.0",
     "typescript": "^3.5.1",
+    "wdio-image-comparison-service": "^1.1.0",
     "webdriverio": "^5.10.0"
   }
 }

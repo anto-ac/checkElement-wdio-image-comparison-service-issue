@@ -1,3 +1,5 @@
+const { join } = require('path');
+
 let config = {
   maxInstances: 2,
   specs: [
@@ -30,6 +32,19 @@ let config = {
   reporterOptions: {
     writeStandardOutput: true
   },
+  services: [
+    ['image-comparison',
+    // The options
+      {
+        // Some options, see the docs for more
+        baselineFolder: join(process.cwd(), './visual-regression/reference'),
+        formatImageName: '{tag}-{browserName}-{width}x{height}',
+        screenshotPath: join(process.cwd(), './test-output/visual-regression'),
+        savePerInstance: true,
+        autoSaveBaseline: true,
+        clearRuntimeFolder: true,
+      }],
+  ],
   before (capabilities, specs) {
     const chai = require("chai");
     const tsnode = require('ts-node');
